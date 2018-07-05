@@ -1,0 +1,461 @@
+/*
+Theme Name: Pintglass app theme - new
+Theme URI: n/a
+Author: Chris Brosnan
+Author URI: http://github.com/chrisbrosnan/
+Description: Test theme for WordPress based WEB APP
+*/
+
+#map {
+	min-height: 500px; 
+}
+.acc2.panel, .acc3.panel, .acc4.panel {
+	font-family: 'Oswald', sans-serif !important;
+}
+
+.panel a {
+	color: #000;
+}
+
+@media only screen and (max-device-width: 736px) {
+	
+#privacy h2 {
+	font-size: 4em;
+}
+	
+#privacy h3 {
+	font-size: 3em;
+}
+
+#privacy h4 {
+	font-size: 2.5em;
+}
+	
+#taxLink {
+	font-size: 1.2em !important;font-size: .5em !important;	
+}
+	
+.featCard {
+	text-align: left !important;	
+	font-size: 1.4em;
+}
+	
+.featCard span {
+	margin-left: 1em;
+}
+	
+img#favCard {
+	width: 30% !important; 
+}
+	
+#main button.accordion {
+	font-size: 3.2em !important; 
+}
+
+img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image { 
+	margin-bottom: 3em !important; 
+}
+	
+#main div ul {
+	font-size: 3em !important; 	
+}
+	
+form.wpcf7-form {
+	/*text-align: center;*/
+}
+	
+form.wpcf7-form textarea{
+	min-height: 500px !important; 
+	width: 90%
+}
+	
+form.wpcf7-form input {
+	width: 90%;
+	margin: auto; 
+	font-size: 1.2em;
+}
+	
+figcaption {
+	font-size: 2em; 	
+}
+	
+#main p, #main ul, button.accordion {
+	font-family: 'Oswald', sans-serif;
+}
+	
+#main h2, #main h3 {
+	font-family: 'Oswald', sans-serif !important;
+}
+	
+#main figure {
+	text-align: center;
+}
+	
+#main p a {
+	color: #0000ff;
+}
+
+a {
+	text-decoration: none !important; 		
+}
+	
+#profile-top p.editprofile-link {
+	font-size: 3em !important;
+	text-align: right;
+	margin: 0;
+	width: 100%;
+}
+	
+#profile-top p.profile-email, #profile-top p.profile-postcode {
+	width: 100%; 
+	font-size: 2.5em !important;		
+}
+
+img.inner-homemenu-icons {
+	display: inline-block; 
+	width: 20%; 
+}
+	
+.home-inner-menu{
+	width: 25%;
+	text-align: center;
+	display: inline-block;		
+}
+	
+#home-content-menu {
+	width: 99%; 	
+	margin: auto; 
+}
+	
+#homecontentmenu-container .selected img {
+	background: #999;
+	padding: .5em;
+	border-radius: 1em;
+}
+	
+#homecontentmenu-container {
+	text-align: center; 
+}
+
+.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+	width: 100%; 
+	height: auto; 
+}
+	
+input#searchtext {
+	font-size: 1.5em;
+	width: 90%; 
+}
+	
+input#searchbtn {
+	display: none; 
+}
+	
+input#filtersubmit{
+	font-size: 2em; 
+	width: 30%; 
+	margin: auto; 
+}
+	
+select#searcharea {
+	font-size: 2em !important; 
+}
+	
+#main p {
+	font-size: 3.2em !important; 
+}
+
+#dropdown_menu a {
+    color: #fff;
+    text-decoration: none; 
+    font-size: 4em;
+}
+	
+#dropdown_menu h4 {
+    font-size: 5em;
+}
+
+.filt_span {
+    cursor: default;
+	font-size: 2em !important;
+}
+
+.open_menu, .open_search, .open_home, .open_profile {
+    background: #999; border-radius: 1em;
+}
+
+#header {
+	border: 1px solid #000;
+    width: inherit;
+    position: fixed;
+    top: 0;
+	z-index: 9999;
+}
+
+.hidden {
+    display: none;
+}
+
+#head-inner {
+    background: #fff;
+    text-align: center;
+}
+
+#dropdown_menu, #dropdown_profile, #dropdown_search {
+    background: #808080; 
+    min-height: 700px;
+    overflow: scroll; 
+    opacity: 0.9;
+    padding: 2em;
+    font-family: 'Oswald', sans-serif;
+    color: #fff; 
+}
+	
+/*#dropdown_search p {
+	font-size: 1.2em !important;
+}*/
+
+#searchbtn, #searchtext {
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+#searchtext {
+    width: 60%;
+    margin-right: 1em;
+}
+
+#dropdown_menu h4, #dropdown_profile h4, #dropdown_search h4 {
+    margin-top: 0px !important;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: .3em;
+    color: #fff; 
+	font-size: 3.5em;
+	margin-bottom: .5em;
+}
+
+#footer {
+    background: #e1e1e1;
+}
+
+.menu_card {
+    height: 25em;
+	background-size: cover;
+	background-position: center;
+}
+
+.menu_card h4 { 
+    color: #fff; 
+    /*margin-left: 1em;*/
+	font-size: 3em;
+	background: #333;
+	padding: .5em 2em .5em 2em;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+	font-size: 5em;
+	margin-top: 3em !important;
+}
+
+h4 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+#footer p {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+	font-size: 2em;
+}
+
+p.intro {
+    font-family: 'Oswald', sans-serif;
+	font-size: 3em;
+}
+
+img.social_icons {
+	width: 12%; 
+}
+
+img.icons, img.social_icons {
+    cursor: pointer; 
+}
+		
+} 
+
+@media only screen and (min-device-width: 737px) {
+	
+br#mobile {
+	display: none !important; 
+}
+	
+h1#title {
+	margin-top: 0 !important;	
+}
+	
+#taxLink {
+	font-size: .5em !important;	
+}
+	
+.featCard {
+	text-align: left !important;	
+}
+	
+img#favCard {
+	width: 10% !important; 
+}
+	
+#accordion-container { 
+	margin-top: 2em; 
+}
+	
+form.wpcf7-form {
+	/*text-align: center;*/ 	
+}
+	
+#main p, #main ul {
+	font-family: 'Oswald', sans-serif;
+}
+	
+#main p a {
+	color: #0000ff;
+}
+	
+#main figure {
+	text-align: center;
+}
+
+a {
+	text-decoration: none !important; 		
+}
+	
+img.inner-homemenu-icons {
+	display: inline-block; 
+	width: 20% !important; 
+}
+	
+.home-inner-menu{
+	width: 25%;
+	text-align: center;
+	display: inline-block;		
+}
+	
+#home-content-menu {
+	width: 99%; 	
+	margin: auto; 
+}
+
+#homecontentmenu-container .selected img {
+	background: #999;
+	padding: .5em;
+	border-radius: 1em;
+}
+	
+.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+	width: 100%; 
+	height: auto; 
+}
+	
+#dropdown_menu a {
+    color: #fff;
+    text-decoration: none; 
+    font-size: 1.2em;
+}
+
+.filt_span {
+    cursor: default;
+}
+
+.open_menu, .open_search, open_home, .open_profile {
+    background: #999; border-radius: 1em;
+}
+
+#header {
+    width: inherit;
+    position: fixed;
+    top: 0;
+	border: 1px solid #000;
+	z-index: 9999;
+}
+
+.hidden {
+    display: none;
+}
+
+#head-inner {
+    background: #fff;
+    text-align: center;
+}
+
+#dropdown_menu, #dropdown_profile, #dropdown_search {
+    background: #808080; 
+    min-height: 700px;
+    overflow: scroll; 
+    opacity: 0.9;
+    padding: 2em;
+    font-family: 'Oswald', sans-serif;
+    color: #fff; 
+}
+
+#searchbtn, #searchtext {
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+#searchtext {
+    width: 60%;
+    margin-right: 1em;
+}
+
+#dropdown_menu h4, #dropdown_profile h4, #dropdown_search h4 {
+    margin-top: 0px !important;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: .3em;
+    color: #fff; 
+}
+
+#footer {
+    background: #e1e1e1;
+}
+
+.menu_card {
+    height: 200px;
+}
+
+.menu_card h4 { 
+    color: #fff; 
+    /*margin-left: 2em;*/
+	background: #333;
+	padding: .5em 2em .5em 2em;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h4 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+#footer p {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+p.intro {
+    font-family: 'Oswald', sans-serif;
+}
+
+img.social_icons {
+	width: 10%; 
+}
+
+img.icons, img.social_icons {
+    cursor: pointer; 
+}
+		
+}
