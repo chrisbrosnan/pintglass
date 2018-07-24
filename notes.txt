@@ -1,1 +1,4 @@
-// To be filled
+24th July 2018:
+- Fav/UnFav function
+- Edit user meta form
+- Upload listings
