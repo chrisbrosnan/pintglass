@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'PintglassLDN') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -15,11 +15,32 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+	
+	<!-- FontAwesome -->
+	<link href="https://pintglassldn.com/resources/fonts/all.css" rel="stylesheet">
+	<script src="https://pintglassldn.com/resources/fonts/all.js" type="text/javscript"></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+	
+	<style>
+		.col-md-3.navbar-nav.ml-auto.text-center.row
+		{
+			padding: 0;	
+		}
+		.col-md-3.navbar-nav.ml-auto.text-center.row li a
+		{
+			color: #000; 
+			font-weight: 600; 
+		}
+		
+		.nav-item.col-6:hover
+		{
+			background: #e1e1e1;
+		}
+	</style>
 </head>
-<body>
+<body style="background: #e1e1e1;">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -32,19 +53,19 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
+                    <div class="col-md-9">
+						<header-menu></header-menu>
+					</div>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="col-md-3 navbar-nav ml-auto text-center row" style="border: #e1e1e1 solid 1px;">
                         <!-- Authentication Links -->
                         @guest
-                            <li class="nav-item">
+                            <li class="nav-item col-6">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
-                                <li class="nav-item">
+                                <li class="nav-item col-6">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
@@ -74,7 +95,10 @@
 
         <main class="py-4">
             @yield('content')
+			<!---<example-component></example-component>--->
         </main>
+		<footer-block></footer-block>
     </div>
+	<script src="/js/app.js"></script>
 </body>
 </html>
