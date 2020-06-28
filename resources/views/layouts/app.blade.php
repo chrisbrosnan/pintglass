@@ -1,4 +1,4 @@
-<!doctype html>
+	<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -15,37 +15,34 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-	
-	<!-- FontAwesome -->
-	<link href="https://pintglassldn.com/resources/fonts/all.css" rel="stylesheet">
-	<script src="https://pintglassldn.com/resources/fonts/all.js" type="text/javscript"></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-	
+	<link href="https://pintglassldn.com/resources/styles.css" rel="stylesheet">
+
 	<style>
 		.col-md-3.navbar-nav.ml-auto.text-center.row
 		{
-			padding: 0;	
+			padding: 0;
 		}
 		.col-md-3.navbar-nav.ml-auto.text-center.row li a
 		{
-			color: #000; 
-			font-weight: 600; 
+			color: #000;
+			font-weight: 600;
 		}
-		
+
 		.nav-item.col-6:hover
 		{
 			background: #e1e1e1;
 		}
 	</style>
 </head>
-<body style="background: #e1e1e1;">
+<body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <img title="PintglassLDN Logo" src="https://pintglassldn.com/storage/images/pintglassldn-logo.jpg" style="max-height: 40px;"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -70,33 +67,23 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
+                            <li class="nav-item col-12">
+                                <a class="nav-link" href="{{ route('logout') }}">{{ __('Logout') }}</a>
                             </li>
                         @endguest
                     </ul>
                 </div>
             </div>
-        </nav>
+		</nav>
 
-        <main class="py-4">
-            @yield('content')
-			<!---<example-component></example-component>--->
-        </main>
+		@guest
+			<in-app-menu></in-app-menu>
+		@else
+			<in-app-menu></in-app-menu>
+		@endguest
+
+		@yield('content')
+		
 		<footer-block></footer-block>
     </div>
 	<script src="/js/app.js"></script>

@@ -37,6 +37,32 @@ Route::get('/blog', function () {
     return view('page-blog');
 });
 
+// User pages
+
+Route::get('/settings', function () {
+    return view('users.page-settings');
+});
+
+Route::get('/groups', function () {
+    return view('users.page-groups');
+});
+
+Route::get('/friends', function () {
+    return view('users.page-user-lists');
+});
+
+Route::get('/my-profile', function () {
+    return view('users.page-user-profile');
+});
+
+Route::get('/edit-profile', function () {
+    return view('users.page-edit-profile');
+});
+
+Route::get('/dashboard', 'HomeController@index')->name('home');
+
+// ------------------------------ //
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
