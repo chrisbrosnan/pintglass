@@ -8,11 +8,14 @@
 				<a :href="homeurl + 'venues'">Venues</a>
 			</li>
 			<li class="col-3">
-				<a :href="homeurl + 'search'">Search</a>
+				<a :href="homeurl + 'beverages'">Beverages</a>
 			</li>
 			<li class="col-3">
-				<a :href="homeurl + 'blog'">Blog</a>
+				<a :href="homeurl + 'search'">Search</a>
 			</li>
+			<!----<li class="col-3">
+				<a :href="homeurl + 'blog'">Blog</a>
+			</li>---->
 		</ul>
 	</div>
 </template>
@@ -26,7 +29,7 @@
 			}
 		},
         mounted() {
-            console.log('Component mounted.')
+            console.log('Component mounted: HeaderMenu')
         }
     }
 </script>

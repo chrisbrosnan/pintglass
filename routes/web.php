@@ -51,6 +51,10 @@ Route::get('/friends', function () {
     return view('users.page-user-lists');
 });
 
+Route::get('/lists', function () {
+    return view('users.page-lists');
+});
+
 Route::get('/my-profile', function () {
     return view('users.page-user-profile');
 });

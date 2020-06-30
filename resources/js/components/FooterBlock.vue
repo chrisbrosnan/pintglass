@@ -12,7 +12,10 @@
 				</div>
 				<div class="col-4"></div>
 			</div>
-			<div id="copyright" class="col-12 text-center"><p><em>Copyright &copy; {{ year }} {{ company }}. All Rights Reserved.</em></p></div>
+			<div id="copyright" class="col-12 text-center">
+				<p><em>Copyright &copy; {{ year }} {{ company }}. All Rights Reserved.</em></p>
+			</div>
+			<website-carbon></website-carbon>
 		</div>
 	</footer>
 </template>
@@ -20,8 +23,13 @@
 <script>
 	var date = new Date();
 	
+	import WebsiteCarbon from './WebsiteCarbon'
+	
     export default {
 		name: 'footer-block', 
+	    components: {
+			WebsiteCarbon
+		}, 
 		data() {
 			return {
 				homeurl: 'https://pintglassldn.com/', 
@@ -32,7 +40,7 @@
 			}
 		},
         mounted() {
-            console.log('Component mounted.')
+            console.log('Component mounted: FooterBlock')
         }
     }
 </script>

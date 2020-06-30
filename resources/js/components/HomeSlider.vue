@@ -1,26 +1,24 @@
 <template>
-	<div class="container-fluid" id="homeSlider">
-		
-	</div>
+	<div class="container-fluid jumbotron" id="homeSlider" style="background: none;">
+	</div> 
 </template>
 
 <script>
     export default {
 		name: 'home-slider', 
-		data() {
-			return {
-				homeurl: 'https://pintglassldn.com/'
-			}
-		},
-        mounted() {
-            console.log('Component mounted.')
-        }
+		mounted() {
+			console.log('Component mounted: HomeSlider')
+		}
     }
 </script>
 	
 <style scoped>
 	#homeSlider {
-		height: 400px; 
-		background: #e1e1e1;
+		margin: 0; 
+		padding: 0;
+		min-height: 650px;
 	}	
+	#homeImage {
+		width: 100%; 
+	}
 </style>
