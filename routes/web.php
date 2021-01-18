@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\BeverageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,28 +16,47 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/', 'PageController@getHomepage');
+
+Auth::routes();
+
+// Top level pages
+
+Route::group(['prefix' => ''], function () {
+
+    Route::get('/{slug?}',
+      [PageController::class, 'getPage']
+    )->name('getPage');
+
 });
+
+// Blog posts
+
+Route::group(['prefix' => 'blog'], function () {
+
+    Route::get('/{slug?}',
+      [BlogController::class, 'getPost']
+    )->name('getPost');
+
+});
+
+// Beverage entries
+
+Route::group(['prefix' => 'beverages'], function () {
+
+    Route::get('/{slug?}',
+      [BeverageController::class, 'getEntry']
+    )->name('getEntry');
+
+});
+
+
+
+
+// Other pages
 
 Route::get('/myaccount', function () {
     return view('home');
-});
-
-Route::get('/about', function () {
-    return view('page-about');
-});
-
-Route::get('/venues', function () {
-    return view('page-venues');
-});
-
-Route::get('/search', function () {
-    return view('page-search');
-});
-
-Route::get('/blog', function () {
-    return view('page-blog');
 });
 
 // User pages
@@ -47,6 +69,10 @@ Route::get('/groups', function () {
     return view('users.page-groups');
 });
 
+Route::get('/groups/add-new', function () {
+    return view('users.page-groups-add');
+});
+
 Route::get('/friends', function () {
     return view('users.page-user-lists');
 });
@@ -55,12 +81,24 @@ Route::get('/lists', function () {
     return view('users.page-lists');
 });
 
-Route::get('/my-profile', function () {
+Route::get('users/{id}', function ($id) {
     return view('users.page-user-profile');
 });
 
 Route::get('/edit-profile', function () {
     return view('users.page-edit-profile');
+});
+
+Route::get('/settings-process', function () {
+	return view('users.process-settings');
+});
+
+Route::get('/process-profile-edit', function () {
+	return view('users.process-profile-edit');
+});
+
+Route::get('/add-group-process', function() {
+	return view('users.process-add-group');
 });
 
 Route::get('/dashboard', 'HomeController@index')->name('home');
