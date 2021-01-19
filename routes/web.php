@@ -16,7 +16,11 @@ use App\Http\Controllers\BeverageController;
 |
 */
 
-Route::get('/', 'PageController@getHomepage');
+//Route::get('/', 'PageController@getHomepage');
+
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Auth::routes();
 
