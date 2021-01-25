@@ -46,6 +46,18 @@ class DataController extends Controller
 		return $request; 
 	}
 
+	// Blog
+
+	function getAllBlogData()
+	{
+		return $this->getCollectionAllData('blog'); 
+	}
+	
+	function getBlogData($slug)
+	{
+		return $this->getCollectionSingleData('beverages', $slug); 
+	}
+
 	// Beverages
 
 	function getAllBeverageData()
