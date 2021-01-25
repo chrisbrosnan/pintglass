@@ -14,12 +14,18 @@ class LayoutController extends Controller
 
     public function homeBlogLayout($data)
     {
-        return $data; 
+        foreach($data['entries'] as $i)
+        {
+            print_r($i); 
+        }
     }
 
     public function homeBevLayout($data)
     {
-        return $data; 
+        foreach($data['entries'] as $i)
+        {
+            print_r($i); 
+        }
     }
 
 }
