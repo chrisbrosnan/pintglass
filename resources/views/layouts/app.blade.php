@@ -138,21 +138,21 @@
     </div>
 	
 	<script>
-		window.onscroll = function() {stickyNavbarFunction()};
+		// window.onscroll = function() {stickyNavbarFunction()};
 
-		var navbar = document.getElementById("navbar");
-		var contentDiv = document.getElementById("content");  
-		var sticky = navbar.offsetTop;
+		// var navbar = document.getElementById("navbar");
+		// var contentDiv = document.getElementById("content");  
+		// var sticky = navbar.offsetTop;
 
-		function stickyNavbarFunction() {
-			if (window.pageYOffset >= sticky) {
-				navbar.classList.add("sticky")
-				contentDiv.classList.add("pt-7"); 
-			} else {
-				navbar.classList.remove("sticky");
-				contentDiv.classList.remove("pt-7"); 
-			}
-		}
+		// function stickyNavbarFunction() {
+		// 	if (window.pageYOffset >= sticky) {
+		// 		navbar.classList.add("sticky")
+		// 		contentDiv.classList.add("pt-7"); 
+		// 	} else {
+		// 		navbar.classList.remove("sticky");
+		// 		contentDiv.classList.remove("pt-7"); 
+		// 	}
+		// }
 	</script>
 	
 </body>
