@@ -7,9 +7,9 @@
 			<div class="col-12 col-md-10 m-5">
 				<div class="card">					
 					<div class="card-body row">
-						@php( echo $beverageFeed; )
+						{{!! $beverageFeed !!}}
 						<br/><br/>
-						@php( echo $blogFeed; )
+						{{!! $blogFeed !!}}
 					</div>
 				</div>
 			</div>
