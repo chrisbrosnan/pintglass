@@ -7,9 +7,9 @@
 			<div class="col-12 col-md-10 m-5">
 				<div class="card">					
 					<div class="card-body row">
-						@php(print_r($beverageFeed))
+						{{ $beverageFeed }}
 						<br/><br/>
-						@php(print_r($blogFeed))
+						{{ $blogFeed }}
 					</div>
 				</div>
 			</div>
