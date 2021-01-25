@@ -16,11 +16,7 @@ use App\Http\Controllers\BeverageController;
 |
 */
 
-//Route::get('/', 'PageController@getHomepage');
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PageController@getHomepage');
 
 Auth::routes();
 
@@ -53,6 +49,9 @@ Route::group(['prefix' => 'beverages'], function () {
     )->name('getEntry');
 
 });
+
+
+
 
 
 

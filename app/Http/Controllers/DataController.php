@@ -39,6 +39,13 @@ class DataController extends Controller
 		return $request; 
 	}
 
+	function getSingletonData($slug)
+	{
+		$jsonUrl = $this->getCmsApiUrl . 'singletons/' . $slug . '?token=' . $this->getCmsApiToken; 
+		$request = Http::get($jsonUrl); 
+		return $request; 
+	}
+
 	// Beverages
 
 	function getAllBeverageData()
@@ -124,54 +131,56 @@ class DataController extends Controller
 	}
 
 
+
+	// Homepage Data
 	
-	function getHomepageData()
-	{
-		$jsonUrl = $this->getWpApiUrl() . 'pages?slug=homepage'; 
-		$request = Http::get($jsonUrl); 
-		return $request; 
-	}
+	// function getHomepageData()
+	// {
+	// 	$jsonUrl = $this->getWpApiUrl() . 'pages?slug=homepage'; 
+	// 	$request = Http::get($jsonUrl); 
+	// 	return $request; 
+	// }
 	
-	function getAllBeveragesData()
-	{
-		$jsonUrl = $this->getWpApiUrl() . 'beverages'; 
-		$request = Http::get($jsonUrl); 
-		return $request->getBody()->getContents(); 
-	}
+	// function getAllBeveragesData()
+	// {
+	// 	$jsonUrl = $this->getWpApiUrl() . 'beverages'; 
+	// 	$request = Http::get($jsonUrl); 
+	// 	return $request->getBody()->getContents(); 
+	// }
 	
-	function getAllBlogData()
-	{
-		$jsonUrl = $this->getWpApiUrl() . 'posts'; 
-		$request = Http::get($jsonUrl); 
-		return $request->getBody()->getContents();
-	}
+	// function getAllBlogData()
+	// {
+	// 	$jsonUrl = $this->getWpApiUrl() . 'posts'; 
+	// 	$request = Http::get($jsonUrl); 
+	// 	return $request->getBody()->getContents();
+	// }
 	
-	function getPageData($slug)
-	{
-		$jsonUrl = $this->getWpApiUrl() . 'pages/?slug=' . $slug; 
-		$request = Http::get($jsonUrl); 
-		return $request; 
-	}
+	// function getPageData($slug)
+	// {
+	// 	$jsonUrl = $this->getWpApiUrl() . 'pages/?slug=' . $slug; 
+	// 	$request = Http::get($jsonUrl); 
+	// 	return $request; 
+	// }
 	
-	function getPostData($slug)
-	{
-		$jsonUrl = $this->getWpApiUrl() . 'posts/?slug=' . $slug; 
-		$request = Http::get($jsonUrl); 
-		return $request; 
-	}
+	// function getPostData($slug)
+	// {
+	// 	$jsonUrl = $this->getWpApiUrl() . 'posts/?slug=' . $slug; 
+	// 	$request = Http::get($jsonUrl); 
+	// 	return $request; 
+	// }
 	
-	function getPostById($id)
-	{
-		$jsonUrl = $this->getWpApiUrl() . 'posts/?id=' . $id; 
-		$request = Http::get($jsonUrl); 
-		return $request; 
-	}
+	// function getPostById($id)
+	// {
+	// 	$jsonUrl = $this->getWpApiUrl() . 'posts/?id=' . $id; 
+	// 	$request = Http::get($jsonUrl); 
+	// 	return $request; 
+	// }
 	
-	function getPageFeatImg($slug)
-	{
-		$jsonUrl = $this->getWpApiUrl() . 'pages/?slug=' . $slug . '&_embed'; 
-		$request = Http::get($jsonUrl); 
-		return $request; 
-	}
+	// function getPageFeatImg($slug)
+	// {
+	// 	$jsonUrl = $this->getWpApiUrl() . 'pages/?slug=' . $slug . '&_embed'; 
+	// 	$request = Http::get($jsonUrl); 
+	// 	return $request; 
+	// }
 
 }

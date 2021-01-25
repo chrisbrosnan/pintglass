@@ -21,9 +21,8 @@ class PageController extends Controller
 
     function getHomepage()
     {
-      $data = $this->api->getHomepageData();
-      $pageData = $data->json();
-      $dataArray = array('pageData');
+      $globalData = $this->api->getSingletonData($slug); 
+      $dataArray = array('globalData');
       return view('index', compact($dataArray));
     }
 
