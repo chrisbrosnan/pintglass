@@ -28,7 +28,7 @@ class DataController extends Controller
 	function getCollectionAllData($c)
 	{
 		$jsonUrl = $this->getCmsApiUrl() . 'collections/' . $c . '?token=' . $this->getCmsApiToken(); 
-		$request = Http::get($jsonUrl); 
+		$request = Http::get($jsonUrl)->getBody(); 
 		return $request;
 	}
 
