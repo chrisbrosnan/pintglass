@@ -21,16 +21,17 @@ class BeverageController extends Controller
 
     function getEntry($slug)
     {
-    	$data = $this->api->getBeverageData($slug);
-      	$pageData = $data->json()[0]; 
-		$pageTitle = $pageData['title']['rendered'];
-		$pageSlug = $pageData['slug'];
-	  	$bevData = $this->api->getAllBeveragesData(); 
-		$dataFields = $pageData['acf'];
-	  	$blogData = $this->api->getAllBlogData(); 
-		$pageImg = $pageData['better_featured_image']['media_details']['sizes']['medium']['source_url']; 
-      	$dataArray = array('pageData', 'pageTitle', 'pageSlug', 'bevData', 'blogData', 'pageImg', 'dataFields'); 
-      	return view('beverage', compact($dataArray));
+      $bevData = $this->api->getBeverageData($slug);
+      print_r($bevData);
+      //   	$pageData = $data->json()[0]; 
+      // $pageTitle = $pageData['title']['rendered'];
+      // $pageSlug = $pageData['slug'];
+      // 	$bevData = $this->api->getAllBeveragesData(); 
+      // $dataFields = $pageData['acf'];
+      // 	$blogData = $this->api->getAllBlogData(); 
+      // $pageImg = $pageData['better_featured_image']['media_details']['sizes']['medium']['source_url']; 
+      // $dataArray = array('bevData'); 
+      // return view('beverage', compact($dataArray));
     }
 
 }
