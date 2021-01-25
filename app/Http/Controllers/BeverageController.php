@@ -21,7 +21,7 @@ class BeverageController extends Controller
 
     function getEntry($slug)
     {
-      $bevData = $this->api->getBeverageData($slug);
+      $bevData = $this->api->getBeverageData($slug)['entries'][0];
       //   	$pageData = $data->json()[0]; 
       // $pageTitle = $pageData['title']['rendered'];
       // $pageSlug = $pageData['slug'];

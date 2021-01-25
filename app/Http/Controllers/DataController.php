@@ -37,7 +37,7 @@ class DataController extends Controller
 	{
 		$jsonUrl = $this->getCmsApiUrl() . 'collections/get/' . $c . '?token=' . $this->getCmsApiToken() . '&?filter[slug]=' . $slug; 
 		$request = Http::get($jsonUrl); 
-		return $request->json()['entries'][0];
+		return $request->json();
 	}
 
 	function getSingletonData($slug)
