@@ -36,14 +36,14 @@ class DataController extends Controller
 	function getCollectionSingleData($c, $slug)
 	{
 		$jsonUrl = $this->getCmsApiUrl() . 'collections/' . $c . '?token=' . $this->getCmsApiToken() . '&?filter[slug]=' . $slug; 
-		$request = $this->callAPI($jsonUrl);
+		$request = Http::get($jsonUrl); 
 		return $request;
 	}
 
 	function getSingletonData($slug)
 	{
 		$jsonUrl = $this->getCmsApiUrl() . 'singletons/' . $slug . '?token=' . $this->getCmsApiToken(); 
-		$request = $this->callAPI($jsonUrl);
+		$request = Http::get($jsonUrl); 
 		return $request;
 	}
 
