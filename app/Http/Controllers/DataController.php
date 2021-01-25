@@ -30,21 +30,21 @@ class DataController extends Controller
 	{
 		$jsonUrl = $this->getCmsApiUrl() . 'collections/' . $c . '?token=' . $this->getCmsApiToken(); 
 		$request = Http::get($jsonUrl); 
-		return $request;
+		return $request->json();
 	}
 
 	function getCollectionSingleData($c, $slug)
 	{
 		$jsonUrl = $this->getCmsApiUrl() . 'collections/' . $c . '?token=' . $this->getCmsApiToken() . '&?filter[slug]=' . $slug; 
 		$request = Http::get($jsonUrl); 
-		return $request;
+		return $request->json();
 	}
 
 	function getSingletonData($slug)
 	{
 		$jsonUrl = $this->getCmsApiUrl() . 'singletons/' . $slug . '?token=' . $this->getCmsApiToken(); 
 		$request = Http::get($jsonUrl); 
-		return $request;
+		return $request->json();
 	}
 
 	// Blog
