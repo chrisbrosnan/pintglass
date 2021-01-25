@@ -21,16 +21,10 @@ class BlogController extends Controller
 
     function getPost($slug)
     {
-    	$data = $this->api->getPostData($slug);
-      	$pageData = $data->json()[0]; 
-		$pageTitle = $pageData['title']['rendered'];
-		$pageSlug = $pageData['slug'];
-	  	$bevData = $this->api->getAllBeveragesData(); 
-	  	$blogData = $this->api->getAllBlogData(); 
-		$dataFields = $pageData['acf'];
-		//$pageImg = $this->api->getPageFeatImg($pageSlug)[0]['_embedded']['wp:featuredmedia'][0]['source_url']; 
-      	$dataArray = array('pageData', 'pageTitle', 'pageSlug', 'bevData', 'blogData', 'dataFields'); 
-      	return view('blog', compact($dataArray));
+    	$blogData = $this->api->getBlogData($slug)['entries'][0];
+      $globalData = $this->api->getSingletonData('globals'); 
+      $dataArray = array('bevData', 'globalData'); 
+      return view('blog', compact($dataArray));
     }
 
 }

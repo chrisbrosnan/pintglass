@@ -81,8 +81,8 @@
 										</tbody>
 									</table>
 									<br/>
-									<h2 class="text-upper mt-2 mb-2">PintglassLDN review</h2>
-									 <br/>
+									<h2 class="text-upper mt-2 mb-2">PintglassLDN review</h2><br/>
+									{!! $bevData['content'] !!}
 									<p class="mt-2 mb-0 pt-2">
 										<span style="font-weight: 500;"><em>PintglassLDN Rating</em></span><br/>
 										@foreach(range(1, $bevData['pintglass_rating']) as $n)
