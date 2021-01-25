@@ -53,7 +53,7 @@
 													{{ $bevData['year_brewed'] }}
 												</td>
 												<td>
-													<!--- Count Reviews --->
+													{{ $bevData['rev_count'] }}
 												</td>
 											</tr>
 											<tr class="text-upper">
@@ -75,7 +75,7 @@
 													{{ $bevData['type'] }}
 												</td>
 												<td class="grey-cell">
-													
+													{{ $bevData['fav_count'] }}
 												</td>
 											</tr>
 										</tbody>
@@ -97,7 +97,11 @@
 									<h2 class="text-upper mt-2 mb-2">User reviews</h2>
 									<div class="mb-4">
 										<!--- Reviews here --->
-										<!--- Count Reviews --->
+										@if($bevData['rev_count'] == 0)
+											<p>There are no user reviews for this beer. <a href="#">Leave one now</a>.</p>
+										@else 
+
+										@endif
 									</div>
 									<!--<h2 class="text-upper mt-2 mb-2">Others from <em>{{ $bevData['brewery'] }}</em></h2>
 									<div class="mb-4">
