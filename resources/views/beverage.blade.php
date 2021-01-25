@@ -85,7 +85,7 @@
 									 <br/>
 									<p class="mt-2 mb-0 pt-2">
 										<span style="font-weight: 500;"><em>PintglassLDN Rating</em></span><br/>
-										@foreach(range(0, $bevData['pintglass_rating']) as $n)
+										@foreach(range(1, $bevData['pintglass_rating']) as $n)
 											<i class="fas fa-star yellow-star" style="color: orange;"></i>
 										@endforeach
 										{{ $bevData['pintglass_rating'] }} / 5
