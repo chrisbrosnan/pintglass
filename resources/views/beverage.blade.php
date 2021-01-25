@@ -14,7 +14,7 @@
 						<div class="container">
 							<div class="row">
 								<div class="col-12 col-md-4">
-									<amp-img class="mb-3" alt="{{ $bevData['name'] }}" src="{{ URL::to('/') }}{{ $bevData['image']['path'] }}" height="1000" width="1000" layout="responsive"></amp-img>
+									<amp-img class="mb-3" alt="{{ $bevData['name'] }}" src="{{ URL::to('/') }}/{{ $bevData['image']['path'] }}" height="1000" width="1000" layout="responsive"></amp-img>
 									<div class="mb-4 text-center">
 										<button class="fav-btn">
 											Add to Favourites
