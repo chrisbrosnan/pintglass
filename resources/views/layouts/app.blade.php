@@ -1,6 +1,7 @@
 <!doctype html>
 <html amp lang="en" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	
@@ -48,76 +49,9 @@
 	<script async src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
 	
 	<style amp-boilerplate>
-		.col-md-3.navbar-nav.ml-auto.text-center.row
-		{
-			padding: 0;
-		}
-		.col-md-3.navbar-nav.ml-auto.text-center.row li a
-		{
-			color: #000;
-			font-weight: 600;
-		}
-
-		.nav-item.col-6:hover
-		{
-			background: #e1e1e1;
-		}
-		@media only screen and (max-width: 800px) {
-			.dtOnly 
-			{
-				display: none !important; 
-			}
-		}
-		footer {
-			background: #fff; 
-			border-top: #a1a1a1 2px solid; 
-			min-height: 200px;
-			padding-bottom: 2em;
-		}	
-		#copyright, .footer-col-social {
-			padding-bottom: 1em; 	
-		}
-
-		.footer-col h5 {
-			text-transform: uppercase; 	
-			margin-top: 1em;
-			display: none; 
-		}
-
-		.footer-col a, .footer-col a:hover {
-			color: #000; 	
-			text-decoration: none; 
-		}
-		ul.navbar-nav a {
-			font-weight: 600; 
-			color: #333; 
-		}
-		ul.navbar-nav a:hover {
-			border-bottom: 2px solid #000; 
-			text-decoration: none; 
-		}
-		
-		/*** New Styles ***/ 
-
-		.content {
-		  	padding: 16px;
-		}
-
-		.sticky {
-		  	position: fixed;
-		  	top: 0;
-			z-index: 999;
-		  	width: 100%;
-		}
-
-		.sticky + .content {
-		  	padding-top: 60px;
-		}
-		
-		a, a:hover {
-			text-decoration: none; 
-		}
+		{{ $globalData['header_styles'] }}
 	</style>
+
 </head>
 <body>
 	
