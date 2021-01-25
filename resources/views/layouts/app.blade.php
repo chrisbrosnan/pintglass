@@ -13,7 +13,7 @@
 	{{ $globalData['header_scripts'] }}
 	
     <title>{{ config('app.name', 'PintglassLDN') }}</title>
-    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+    <link rel="canonical" href="{{ URL::current() }}">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 	
 	<!-- Scripts -->
