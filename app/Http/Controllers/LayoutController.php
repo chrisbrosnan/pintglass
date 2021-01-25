@@ -14,18 +14,30 @@ class LayoutController extends Controller
 
     public function homeBlogLayout($data)
     {
+        $o = ''; 
         foreach($data['entries'] as $i)
         {
-            print_r($i); 
+            $o .= '<a class="col-12 col-md-4" href="https://pintglassldn.com/beverages/' . $i["slug"] . '">
+                <div class="p-0" style="height: 200px; background: url(' . $i["image"]["path"] . '); background-size: cover; background-position: center center;">
+                    <p class="col-12 text-white font-weight-bold py-2 bg-dark" style="line-height: 1.3em;">' . $i["name"] . '</p>
+                </div>
+            </a>';
         }
+        return $o; 
     }
 
     public function homeBevLayout($data)
     {
+        $o = ''; 
         foreach($data['entries'] as $i)
         {
-            print_r($i); 
+            $o .= '<a class="col-12 col-md-4" href="https://pintglassldn.com/beverages/' . $i["slug"] . '">
+                <div class="p-0" style="height: 200px; background: url(' . $i["image"]["path"] . '); background-size: cover; background-position: center center;">
+                    <p class="col-12 text-white font-weight-bold py-2 bg-dark" style="line-height: 1.3em;">' . $i["name"] . '</p>
+                </div>
+            </a>';
         }
+        return $o; 
     }
 
 }
