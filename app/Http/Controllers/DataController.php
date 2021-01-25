@@ -29,7 +29,7 @@ class DataController extends Controller
 	function getCollectionAllData($c)
 	{
 		$jsonUrl = $this->getCmsApiUrl() . 'collections/' . $c . '?token=' . $this->getCmsApiToken(); 
-		$request = $this->callAPI($jsonUrl);
+		$request = $Http::get($jsonUrl); 
 		return $request;
 	}
 
@@ -45,55 +45,6 @@ class DataController extends Controller
 		$jsonUrl = $this->getCmsApiUrl() . 'singletons/' . $slug . '?token=' . $this->getCmsApiToken(); 
 		$request = Http::get($jsonUrl); 
 		return $request;
-	}
-
-	public function callAPI($jsonUrl, $flag = false){
-		$response = Http::withHeaders([
-			'Authorization' => 'Basic YWRtaW46Mzg2S3Y4Y0ZzU1RmNHJWaw==',
-			'Content-Type' => 'application/json'
-		  ])->get($jsonUrl);	
-		if($response->successful() && $flag==false)
-		{
-			if(strpos($jsonUrl,'singletons')){
-				if($response->json()!== null)
-				{
-					Log::debug('Success with API url is: '.$jsonUrl.' - Status:'.$response->status());
-					return $response;
-				}
-				else
-				{
-					Log::debug('Data empty with API url is: '.$jsonUrl.'- Status:'.$response->status().' - Response: '.$response);
-					return abort(503, 'Site Maintenance');
-				}
-			}	
-			if(strpos($jsonUrl,'collections'))
-			{
-				if(isset($response['entries']) && $response['entries'] != null)
-				{
-					Log::debug('Success with API url is: '.$jsonUrl.' - Status:'.$response->status());
-					return $response;
-				}
-				else
-				{
-					Log::debug('Data empty with API url is: '.$jsonUrl.' - Status:'.$response->status().' - Response: '.$response);
-					return abort(503, 'Site Maintenance');
-				}
-			}	
-			Log::debug('Special case empty with API url is: '.$jsonUrl.' - Status:'.$response->status().' - Response: '.$response);
-			return abort(503, 'Site Maintenance');
-		}
-		else
-		{
-			if($response->successful())
-			{
-				return $response;
-			}
-			else
-			{
-				Log::debug('Can not call API with url is: '.$jsonUrl.' - Status: '.$response->status().' - Response: '.$response);
-				return abort(503, 'Site Maintenance');
-			}
-		}
 	}
 
 	// Blog
