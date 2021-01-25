@@ -10,7 +10,7 @@
 	
     <script async src="https://cdn.ampproject.org/v0.js"></script>
 
-	{{ $globalData['header_scripts'] }}
+	{!! $globalData['header_scripts'] !!}
 	
     <title>{{ config('app.name', 'PintglassLDN') }}</title>
     <link rel="canonical" href="{{ URL::current() }}">
@@ -75,6 +75,8 @@
 		// 	}
 		// }
 	</script>
+
+	{!! $globalData['footer_scripts'] !!}
 	
 </body>
 </html>
