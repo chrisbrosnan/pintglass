@@ -43,7 +43,7 @@ class DataController extends Controller
 	{
 		$jsonUrl = $this->getCmsApiUrl() . 'singletons/' . $slug . '?token=' . $this->getCmsApiToken(); 
 		$request = Http::get($jsonUrl); 
-		return $request->json()->getBody()->getContents();
+		return $request;
 	}
 
 	// Blog
