@@ -23,7 +23,7 @@ class BlogController extends Controller
     {
     	$blogData = $this->api->getBlogData($slug)['entries'][0];
       $globalData = $this->api->getSingletonData('globals'); 
-      $dataArray = array('bevData', 'globalData'); 
+      $dataArray = array('blogData', 'globalData'); 
       return view('blog', compact($dataArray));
     }
 
