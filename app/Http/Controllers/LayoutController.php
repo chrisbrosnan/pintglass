@@ -14,6 +14,7 @@ class LayoutController extends Controller
 
     public function homeBlogLayout($data)
     {
+        $o = '';
         $o .= '<div class="col-12 row">'; 
         foreach($data['entries'] as $i)
         {
@@ -29,6 +30,7 @@ class LayoutController extends Controller
 
     public function homeBevLayout($data)
     {
+        $o = '';
         $o .= '<div class="col-12 row">'; 
         foreach($data['entries'] as $i)
         {
