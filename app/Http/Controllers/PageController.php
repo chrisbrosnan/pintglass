@@ -21,7 +21,7 @@ class PageController extends Controller
 
     function getHomepage()
     {
-      $globalData = $this->api->getSingletonData($slug); 
+      $globalData = $this->api->getSingletonData('globals'); 
       $dataArray = array('globalData');
       return view('index', compact($dataArray));
     }
