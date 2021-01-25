@@ -8,13 +8,13 @@
 				
 				<div id="content-card" class="card">
 					<div class="card-header text-center">
-						<h1>{{ $bevData['title'] }} (ABV {{ $bevData['abv'] }}%)</h1>
+						<h1>{{ $bevData['name'] }} (ABV {{ $bevData['abv'] }}%)</h1>
 					</div>
 					<div class="card-body">
 						<div class="container">
 							<div class="row">
 								<div class="col-12 col-md-4">
-									<amp-img class="mb-2" alt="<?php echo $pageTitle; ?>" src="<?php echo $pageImg; ?>" height="1000" width="1000" layout="responsive"></amp-img>
+									<amp-img class="mb-2" alt="{{ $bevData['name'] }}" src="{{ $bevData['image']['path'] }}" height="1000" width="1000" layout="responsive"></amp-img>
 									<div class="mb-4 text-center">
 										<button class="fav-btn">
 											Add to Favourites

@@ -22,7 +22,6 @@ class BeverageController extends Controller
     function getEntry($slug)
     {
       $bevData = $this->api->getBeverageData($slug)['entries'][0];
-      print_r($bevData); 
       //   	$pageData = $data->json()[0]; 
       // $pageTitle = $pageData['title']['rendered'];
       // $pageSlug = $pageData['slug'];
@@ -31,7 +30,7 @@ class BeverageController extends Controller
       // 	$blogData = $this->api->getAllBlogData(); 
       // $pageImg = $pageData['better_featured_image']['media_details']['sizes']['medium']['source_url']; 
       $dataArray = array('bevData'); 
-      //return view('beverage', compact($dataArray));
+      return view('beverage', compact($dataArray));
     }
 
 }
