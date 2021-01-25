@@ -85,13 +85,13 @@
 									 <br/>
 									<p class="mt-2 mb-0 pt-2">
 										<span style="font-weight: 500;"><em>PintglassLDN Rating</em></span><br/>
-										@foreach(range(1, $bevData['pintglass_rating']) as $n)
+										@foreach(range(0, $bevData['pintglass_rating']) as $n)
 											<i class="fas fa-star yellow-star"></i>
 										@endforeach
-										@foreach(range(1, 5 - $bevData['pintglass_rating']) as $n)
+										@foreach(range(0, 4 - $bevData['pintglass_rating']) as $n)
 											<i class="fas fa-star grey-star"></i>
 										@endforeach
-										{{ $bevData['pintglass_rating'] }} / 10
+										{{ $bevData['pintglass_rating'] }} / 5
 									</p>
 									<br/>
 									<h2 class="text-upper mt-2 mb-2">User reviews</h2>
