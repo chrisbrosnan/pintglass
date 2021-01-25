@@ -14,7 +14,7 @@ class LayoutController extends Controller
 
     public function homeBlogLayout($data)
     {
-        $o = ''; 
+        $o .= '<div class="col-12 row">'; 
         foreach($data['entries'] as $i)
         {
             $o .= '<a class="col-12 col-md-4" href="https://pintglassldn.com/beverages/' . $i["slug"] . '">
@@ -23,12 +23,13 @@ class LayoutController extends Controller
                 </div>
             </a>';
         }
+        $o .= '</div>';
         return $o; 
     }
 
     public function homeBevLayout($data)
     {
-        $o = ''; 
+        $o .= '<div class="col-12 row">'; 
         foreach($data['entries'] as $i)
         {
             $o .= '<a class="col-12 col-md-4" href="https://pintglassldn.com/beverages/' . $i["slug"] . '">
@@ -37,6 +38,7 @@ class LayoutController extends Controller
                 </div>
             </a>';
         }
+        $o .= '</div>';
         return $o; 
     }
 
