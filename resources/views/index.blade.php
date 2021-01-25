@@ -7,9 +7,9 @@
 			<div class="col-12 col-md-10 m-5">
 				<div class="card">					
 					<div class="card-body row">
-						{{!! $beverageFeed !!}}
+						{{ html_entity_decode($beverageFeed) }}
 						<br/><br/>
-						{{!! $blogFeed !!}}
+						{{ html_entity_decode($blogFeed) }}
 					</div>
 				</div>
 			</div>
