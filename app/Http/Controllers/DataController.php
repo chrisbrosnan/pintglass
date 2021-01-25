@@ -28,22 +28,22 @@ class DataController extends Controller
 	function getCollectionAllData($c)
 	{
 		$jsonUrl = $this->getCmsApiUrl() . 'collections/' . $c . '?token=' . $this->getCmsApiToken(); 
-		$request = Http::get($jsonUrl)->getBody()->getContents(); 
-		return $request; 
+		$request = Http::get($jsonUrl); 
+		return $request->getBody()->getContents();
 	}
 
 	function getCollectionSingleData($c, $slug)
 	{
 		$jsonUrl = $this->getCmsApiUrl() . 'collections/' . $c . '?token=' . $this->getCmsApiToken() . '&?filter[slug]=' . $slug; 
-		$request = Http::get($jsonUrl)->getBody()->getContents(); 
-		return $request; 
+		$request = Http::get($jsonUrl); 
+		return $request->getBody()->getContents();
 	}
 
 	function getSingletonData($slug)
 	{
 		$jsonUrl = $this->getCmsApiUrl() . 'singletons/' . $slug . '?token=' . $this->getCmsApiToken(); 
-		$request = Http::get($jsonUrl)->getBody()->getContents(); 
-		return $request; 
+		$request = Http::get($jsonUrl); 
+		return $request->getBody()->getContents();
 	}
 
 	// Blog
