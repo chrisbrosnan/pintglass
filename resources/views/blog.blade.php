@@ -32,12 +32,12 @@
 										{!! $blogData['content'] !!}
 									</div>
 									
-									<h2 class="text-upper mt-2 mb-2">Related articles</h2>
-									<div class="mb-4">
+									<h2 class="col-12 text-upper mt-2 mb-2">Related articles</h2>
+									<div class="col-12 mb-4">
 										<!---  --->
 									</div>
-									<h2 class="text-upper mt-2 mb-2">Comments</h2>
-									<div class="fb-comments" data-href="https://pintglassldn.com/beverages/punk-ipa" data-numposts="5" data-width=""></div>
+									<h2 class="col-12 text-upper mt-2 mb-2">Comments</h2>
+									<div class="col-12 fb-comments" data-href="https://pintglassldn.com/beverages/punk-ipa" data-numposts="5" data-width=""></div>
 								</div>
 							</div>
 						</div>
