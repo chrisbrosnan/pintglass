@@ -26,9 +26,11 @@
 								</div>
 								<div class="col-12 col-md-8">
 
-									<amp-img class="col-12" src="{{ URL::to('/') }}/{{ $blogData['image']['path'] }}" width="800" height="400"></amp-img>
+									<amp-img class="col-12 mb-3" src="{{ URL::to('/') }}/{{ $blogData['image']['path'] }}" width="800" height="400"></amp-img>
 
-									{!! $blogData['content'] !!}
+									<div class="col-12 mb-3">
+										{!! $blogData['content'] !!}
+									</div>
 									
 									<h2 class="text-upper mt-2 mb-2">Related articles</h2>
 									<div class="mb-4">
