@@ -12,19 +12,118 @@ use Config;
 class DataController extends Controller
 {
 
-	const WP_API_URL = 'https://blog.pintglassldn.com/wp-json/wp/v2/';
+	const CMS_API_URL = 'https://pintglassldn.com/admin/api/';
+	const CMS_API_TOKEN = 'ca2da9e3e1c959fafe7cfb98e94108';
 	
-	function getWpApiUrl()
+	function getCmsApiUrl()
 	{
-		return self::WP_API_URL; 
+		return self::CMS_API_URL; 
+	}
+
+	function getCmsApiToken()
+	{
+		return self::CMS_API_TOKEN; 
+	}
+
+	function getCollectionAllData($c)
+	{
+		$jsonUrl = $this->getCmsApiUrl . 'collections/' . $c . '?token=' . $this->getCmsApiToken; 
+		$request = Http::get($jsonUrl); 
+		return $request; 
+	}
+
+	function getCollectionSingleData($c, $slug)
+	{
+		$jsonUrl = $this->getCmsApiUrl . 'collections/' . $c . '?token=' . $this->getCmsApiToken . '&?filter[slug]=' . $slug; 
+		$request = Http::get($jsonUrl); 
+		return $request; 
+	}
+
+	// Beverages
+
+	function getAllBeverageData()
+	{
+		return $this->getCollectionAllData('beverages'); 
 	}
 	
 	function getBeverageData($slug)
 	{
-		$jsonUrl = $this->getWpApiUrl() . 'beverages?slug=' . $slug; 
-		$request = Http::get($jsonUrl); 
-		return $request; 
+		return $this->getCollectionSingleData('beverages', $slug); 
 	}
+
+	// Venues
+
+	function getAllVenueData()
+	{
+		return $this->getCollectionAllData('venues'); 
+	}
+	
+	function getVenueData($slug)
+	{
+		return $this->getCollectionSingleData('venues', $slug); 
+	}
+
+	// Food
+
+	function getAllFoodData()
+	{
+		return $this->getCollectionAllData('food'); 
+	}
+	
+	function getFoodData($slug)
+	{
+		return $this->getCollectionSingleData('food', $slug); 
+	}
+
+	// Themes
+
+	function getAllThemeData()
+	{
+		return $this->getCollectionAllData('themes'); 
+	}
+	
+	function getThemeData($slug)
+	{
+		return $this->getCollectionSingleData('themes', $slug); 
+	}
+
+	// Locations
+
+	function getAllLocationData()
+	{
+		return $this->getCollectionAllData('locations'); 
+	}
+	
+	function getLocationData($slug)
+	{
+		return $this->getCollectionSingleData('locations', $slug); 
+	}
+
+	// Features
+
+	function getAllFeatureData()
+	{
+		return $this->getCollectionAllData('features'); 
+	}
+	
+	function getFeatureData($slug)
+	{
+		return $this->getCollectionSingleData('features', $slug); 
+	}
+
+	// Users
+
+	function getAllUserData()
+	{
+		return $this->getCollectionAllData('users'); 
+	}
+	
+	function getUserData($slug)
+	{
+		return $this->getCollectionSingleData('users', $slug); 
+	}
+
+
 	
 	function getHomepageData()
 	{
