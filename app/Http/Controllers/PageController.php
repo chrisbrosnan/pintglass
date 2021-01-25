@@ -28,7 +28,7 @@ class PageController extends Controller
       $allBlogData = $this->api->getAllBlogData(); 
       $blogFeed = $this->layout->homeBlogLayout($allBlogData); 
       $beverageFeed = $this->layout->homeBevLayout($allBevData); 
-      $dataArray = array('globalData', 'allBevData', 'allBlogData', 'blogFeed', 'beverageFeed');
+      $dataArray = array('globalData', 'blogFeed', 'beverageFeed');
       return view('index', compact($dataArray));
     }
 
