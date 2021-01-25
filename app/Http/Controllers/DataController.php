@@ -55,7 +55,7 @@ class DataController extends Controller
 	
 	function getBlogData($slug)
 	{
-		return $this->getCollectionSingleData('beverages', $slug); 
+		return $this->getCollectionSingleData('blog', $slug); 
 	}
 
 	// Beverages
