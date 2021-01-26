@@ -35,7 +35,7 @@ class DataController extends Controller
 
 	function getCollectionSingleData($c, $slug)
 	{
-		$jsonUrl = $this->getCmsApiUrl() . 'collections/get/' . $c . '?token=' . $this->getCmsApiToken() . '&?filter[slug]=' . $slug; 
+		$jsonUrl = 'https://pintglassldn.com/admin/api/collections/get/pages?token=ca2da9e3e1c959fafe7cfb98e94108&?filter[slug]=' . $slug; 
 		$request = Http::get($jsonUrl); 
 		return $request->json();
 	}
@@ -147,7 +147,7 @@ class DataController extends Controller
 	
 	function getPageData($slug)
 	{
-		return $this->getCollectionSingleData('pages', $slug)['entries'][0]; 
+		return $this->getCollectionSingleData('pages', $slug); 
 	}
 
 
