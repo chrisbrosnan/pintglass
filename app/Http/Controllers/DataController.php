@@ -143,6 +143,13 @@ class DataController extends Controller
 		return $this->getCollectionSingleData('users', $slug); 
 	}
 
+	// Pages
+	
+	function getPageData($slug)
+	{
+		return $this->getCollectionSingleData('pages', $slug); 
+	}
+
 
 
 	// Homepage Data

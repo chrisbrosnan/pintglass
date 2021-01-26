@@ -34,15 +34,13 @@ class PageController extends Controller
 
     function getPage($slug)
     {
-    	$data = $this->api->getPageData($slug);
-      	$pageData = $data->json()[0]; 
-		$pageTitle = $pageData['title']['rendered'];
-		$pageSlug = $pageData['slug'];
+      $pageData = $this->api->getPageData($slug)->json()[0];
+		  $pageTitle = $pageData['name'];
+		  $pageSlug = $pageData['slug'];
 	  	$bevData = $this->api->getAllBeveragesData(); 
 	  	$blogData = $this->api->getAllBlogData(); 
-		$pageImg = $this->api->getPageFeatImg($pageSlug)[0]['_embedded']['wp:featuredmedia'][0]['source_url']; 
-      	$dataArray = array('pageData', 'pageTitle', 'pageSlug', 'bevData', 'blogData', 'pageImg'); 
-      	return view('page', compact($dataArray));
+      $dataArray = array('pageData', 'pageTitle', 'pageSlug', 'bevData', 'blogData'); 
+      return view('page', compact($dataArray));
     }
 
 }
