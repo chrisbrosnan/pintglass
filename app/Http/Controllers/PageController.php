@@ -34,7 +34,7 @@ class PageController extends Controller
 
     function getPage($slug)
     {
-      $pageData = $this->api->getPageData($slug)[0];
+      $pageData = $this->api->getPageData($slug);
 		  $pageTitle = $pageData['name'];
 		  $pageSlug = $pageData['slug'];
 	  	$bevData = $this->api->getAllBeveragesData(); 
