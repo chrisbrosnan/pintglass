@@ -21,7 +21,7 @@ class BeverageController extends Controller
 
     function getEntry($slug)
     {
-      $bevData = $this->api->getBeverageData($slug);
+      $bevData = $this->api->getBeverageData($slug)[0];
       $globalData = $this->api->getSingletonData('globals'); 
       $dataArray = array('bevData', 'globalData'); 
       return view('beverage', compact($dataArray));

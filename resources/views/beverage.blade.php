@@ -8,13 +8,13 @@
 				
 				<div id="content-card" class="card">
 					<div class="card-header text-center">
-						<h1></h1>
+						<h1>{{ $bevData['name'] }} (ABV {{ $bevData['abv'] }}%)</h1>
 					</div>
 					<div class="card-body">
 						<div class="container">
 							<div class="row">
 								<div class="col-12 col-md-4">
-									<amp-img class="mb-3" alt="" src="" height="1000" width="1000" layout="responsive"></amp-img>
+									<amp-img class="mb-3" alt="{{ $bevData['name'] }}" src="{{ URL::to('/') }}/{{ $bevData['image']['path'] }}" height="1000" width="1000" layout="responsive"></amp-img>
 									<div class="mb-4 text-center">
 										<button class="fav-btn">
 											Add to Favourites
@@ -22,7 +22,7 @@
 									</div>
 									
 									<div class="col-12 text-center mb-4 p-0 m-0 dtOnly">
-										<script type="text/javascript">amzn_assoc_ad_type ="responsive_search_widget"; amzn_assoc_tracking_id ="chrisbrosna0e-21"; amzn_assoc_marketplace ="amazon"; amzn_assoc_region ="GB"; amzn_assoc_placement =""; amzn_assoc_search_type = "search_widget";amzn_assoc_width ="300"; amzn_assoc_height ="300"; amzn_assoc_default_search_category =""; amzn_assoc_default_search_key ="";amzn_assoc_theme ="light"; amzn_assoc_bg_color ="FFFFFF"; </script><script src="//z-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=GB"></script>
+										<script type="text/javascript">amzn_assoc_ad_type ="responsive_search_widget"; amzn_assoc_tracking_id ="chrisbrosna0e-21"; amzn_assoc_marketplace ="amazon"; amzn_assoc_region ="GB"; amzn_assoc_placement =""; amzn_assoc_search_type = "search_widget";amzn_assoc_width ="300"; amzn_assoc_height ="300"; amzn_assoc_default_search_category =""; amzn_assoc_default_search_key ="<?php echo $bevData['affiliate_keyword']; ?>";amzn_assoc_theme ="light"; amzn_assoc_bg_color ="FFFFFF"; </script><script src="//z-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=GB"></script>
 									</div>
 									
 									<a class="twitter-timeline dtOnly" href="https://twitter.com/pintglass_ldn?ref_src=twsrc%5Etfw">
@@ -47,13 +47,13 @@
 											</tr>
 											<tr>
 												<td>
-													
+													{{ $bevData['brewery'] }}
 												</td>
 												<td>
-													
+													{{ $bevData['year_brewed'] }}
 												</td>
 												<td>
-													
+													{{ $bevData['rev_count'] }}
 												</td>
 											</tr>
 											<tr class="text-upper">
@@ -69,30 +69,38 @@
 											</tr>
 											<tr>
 												<td>
-													
+													{{ $bevData['town_origin'] }}
 												</td>
 												<td>
-													
+													{{ $bevData['type'] }}
 												</td>
 												<td class="grey-cell">
-													
+													{{ $bevData['fav_count'] }}
 												</td>
 											</tr>
 										</tbody>
 									</table>
 									<br/>
 									<h2 class="text-upper mt-2 mb-2">PintglassLDN review</h2><br/>
-										@php(print_r($bevData))
+									{!! $bevData['content'] !!}
 									<p class="mt-2 mb-0 pt-2">
-
+										<span style="font-weight: 500;"><em>PintglassLDN Rating</em></span><br/>
+										@foreach(range(1, $bevData['pintglass_rating']) as $n)
+											<i class="fas fa-star yellow-star" style="color: orange;"></i>
+										@endforeach
+										{{ $bevData['pintglass_rating'] }} / 5
 									</p>
 									<br/>
 									<h2 class="text-upper mt-2 mb-2">User reviews</h2>
 									<div class="mb-4">
 										<!--- Reviews here --->
-										
+										@if($bevData['rev_count'] == 0)
+											<p>There are no user reviews for this beer. <a href="#">Leave one now</a>.</p>
+										@else 
+
+										@endif
 									</div>
-									<!--<h2 class="text-upper mt-2 mb-2">Others from <em></em></h2>
+									<!--<h2 class="text-upper mt-2 mb-2">Others from <em>{{ $bevData['brewery'] }}</em></h2>
 									<div class="mb-4">
 										
 									</div>-->
