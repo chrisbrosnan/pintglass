@@ -43,7 +43,7 @@ class LayoutController extends Controller
             $o .= '<a class="col-12 col-md-3" href="https://pintglassldn.com/beverages/' . $i["slug"] . '">
                 <div class="p-0" style="height: 200px; background: url(' . $i["image"]["path"] . '); background-size: cover; background-position: center center;">
                     <p class="col-12 text-white font-weight-bold py-2 bg-dark" style="line-height: 1.3em;">' . $i["name"] . '(ABV '. $i["abv"] .'%)' . '<br/>
-                    <scan style="font-weight: .5em;">' . $i["brewery"] . ' in ' . $i["town_origin"] . ',' . $i["country_origin"] . '</span></p>
+                    <scan clas"font-weight-normal" style="font-weight: .5em;">' . $i["brewery"] . ' in ' . $i["town_origin"] . ',' . $i["country_origin"] . '</span></p>
                 </div>
             </a>';
         }
