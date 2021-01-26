@@ -39,7 +39,7 @@
 													Brewer
 												</th>
 												<th>
-													First Brewed
+													ABV
 												</th>
 												<th>
 													Reviews
@@ -50,7 +50,7 @@
 													{{ $bevData['brewery'] }}
 												</td>
 												<td>
-													{{ $bevData['year_brewed'] }}
+													{{ $bevData['abv'] }}%
 												</td>
 												<td>
 													{{ $bevData['rev_count'] }}
