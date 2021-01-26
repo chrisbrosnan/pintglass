@@ -38,8 +38,9 @@ class PageController extends Controller
 		  //$pageTitle = $pageData['name'];
 		  //$pageSlug = $pageData['slug'];
 	  	$bevData = $this->api->getAllBeverageData(); 
-	  	$blogData = $this->api->getAllBlogData(); 
-      $dataArray = array('pageData', 'bevData', 'blogData'); 
+      $blogData = $this->api->getAllBlogData(); 
+      $globalData = $this->api->getSingletonData('globals'); 
+      $dataArray = array('pageData', 'bevData', 'blogData', 'globalData'); 
       return view('page', compact($dataArray));
     }
 
