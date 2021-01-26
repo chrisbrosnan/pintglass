@@ -92,7 +92,7 @@
 										<!--- Reviews here --->
 										
 									</div>
-									<!--<h2 class="text-upper mt-2 mb-2">Others from <em>{{ $bevData['brewery'] }}</em></h2>
+									<!--<h2 class="text-upper mt-2 mb-2">Others from <em></em></h2>
 									<div class="mb-4">
 										
 									</div>-->
