@@ -7,7 +7,7 @@
 			<div id="content" class="col-12 col-md-10 m-5">
 				<div class="card">
 					<div class="card-header text-center">
-						<h1>{{ $pageData['name'] }}</h1>
+						<h1></h1>
 					</div>
 					<div class="card-body">
 						<div class="container">
@@ -16,7 +16,7 @@
 									<amp-img class="col-12" src="" width="300" height="400"></amp-img>
 								</div>
 								<div class="col-12 col-md-8">
-									
+									@php(print_r($pageData))
 								</div>
 							</div>
 						</div>

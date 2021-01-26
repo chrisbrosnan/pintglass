@@ -35,11 +35,11 @@ class PageController extends Controller
     function getPage($slug)
     {
       $pageData = $this->api->getPageData($slug);
-		  $pageTitle = $pageData['name'];
-		  $pageSlug = $pageData['slug'];
+		  //$pageTitle = $pageData['name'];
+		  //$pageSlug = $pageData['slug'];
 	  	$bevData = $this->api->getAllBeveragesData(); 
 	  	$blogData = $this->api->getAllBlogData(); 
-      $dataArray = array('pageData', 'pageTitle', 'pageSlug', 'bevData', 'blogData'); 
+      $dataArray = array('pageData', 'bevData', 'blogData'); 
       return view('page', compact($dataArray));
     }
 
