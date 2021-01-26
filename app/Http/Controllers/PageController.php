@@ -39,7 +39,7 @@ class PageController extends Controller
 	  	$bevData = $this->api->getAllBeverageData(); 
       $blogData = $this->api->getAllBlogData(); 
       $globalData = $this->api->getSingletonData('globals'); 
-      $dataArray = array('pageData', 'pageSlug', 'bevData', 'blogData', 'globalData'); 
+      $dataArray = array('pageData', 'bevData', 'blogData', 'globalData'); 
       return view('page', compact($dataArray));
     }
 
