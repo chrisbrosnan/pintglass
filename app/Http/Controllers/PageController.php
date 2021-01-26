@@ -36,11 +36,11 @@ class PageController extends Controller
     {
       $pageData = $this->api->getPageData($slug);
 		  //$pageTitle = $pageData['name'];
-		  //$pageSlug = $pageData['slug'];
+		  $pageSlug = $pageData['slug'];
 	  	$bevData = $this->api->getAllBeverageData(); 
       $blogData = $this->api->getAllBlogData(); 
       $globalData = $this->api->getSingletonData('globals'); 
-      $dataArray = array('pageData', 'bevData', 'blogData', 'globalData'); 
+      $dataArray = array('pageData', 'pageSlug', 'bevData', 'blogData', 'globalData'); 
       return view('page', compact($dataArray));
     }
 
