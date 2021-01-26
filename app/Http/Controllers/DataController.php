@@ -147,7 +147,7 @@ class DataController extends Controller
 	
 	function getPageData($slug)
 	{
-		return $this->getCollectionSingleData('pages', $slug); 
+		return $this->getCollectionSingleData('pages', $slug)['entries'][0]; 
 	}
 
 
