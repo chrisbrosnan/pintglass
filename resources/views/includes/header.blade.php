@@ -13,13 +13,10 @@
 
 				<div class="col-12 row">
 					<ul class="col-12 row navbar-nav mr-auto text-center">
-						<li class="col-12 col-md-4">
-							<a href="{{ URL::to('/') }}/about">About</a>
-						</li>
-						<li class="col-12 col-md-4">
+						<li class="col-12 col-md-6">
 							<a href="{{ URL::to('/') }}/beverages">Beverages</a>
 						</li>
-						<li class="col-12 col-md-4">
+						<li class="col-12 col-md-6">
 							<a href="{{ URL::to('/') }}/blog">Blog</a>
 						</li>
 					</ul>
