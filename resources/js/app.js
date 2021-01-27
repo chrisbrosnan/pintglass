@@ -11,6 +11,9 @@ import axios from 'axios'
 Vue.prototype.$http = axios
 
 require('./bootstrap');
+import VueResource from "vue-resource"
+Vue.use(VueResource);
+Vue.component('comment', require('./components/Comments.vue'));
 
 window.Vue = require('vue');
 

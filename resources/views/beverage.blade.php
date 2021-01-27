@@ -91,14 +91,9 @@
 										{{ $bevData['pintglass_rating'] }} / 5
 									</p>
 									<br/>
-									<h2 class="text-upper mt-2 mb-2">User reviews</h2>
+									<h2 class="text-upper mt-2 mb-2">Comments</h2>
 									<div class="mb-4">
-										<!--- Reviews here --->
-										@if($bevData['rev_count'] == 0)
-											<p>There are no user reviews for this beer. <a href="#">Leave one now</a>.</p>
-										@else 
-
-										@endif
+										<comment></comment>
 									</div>
 									<!--<h2 class="text-upper mt-2 mb-2">Others from <em>{{ $bevData['brewery'] }}</em></h2>
 									<div class="mb-4">
