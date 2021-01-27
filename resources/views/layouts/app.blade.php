@@ -10,18 +10,18 @@
 	
     <script async src="https://cdn.ampproject.org/v0.js"></script>
 
-	{!! $globalData['header_scripts'] !!}
+	  {!! $globalData['header_scripts'] !!}
 	
     <title>{{ config('app.name', 'PintglassLDN') }}</title>
     <link rel="canonical" href="{{ URL::current() }}">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 	
-	<!-- Scripts -->
+	  <!-- Scripts -->
     <script async src="{{ asset('js/app.js') }}" defer></script>
 	
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-	<link href="https://pintglassldn.com/resources/styles.css" rel="stylesheet">
+	  <link href="https://pintglassldn.com/resources/styles.css" rel="stylesheet">
 	
     <script async type="application/ld+json">
       {

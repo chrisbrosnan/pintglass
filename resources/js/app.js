@@ -11,9 +11,8 @@ import axios from 'axios'
 Vue.prototype.$http = axios
 
 require('./bootstrap');
-//import VueResource from "vue-resource"
+
 Vue.use(Vue);
-Vue.component('comment', require('./components/Comments.vue'));
 
 window.Vue = require('vue');
 
@@ -28,13 +27,13 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('footer-block', require('./components/FooterBlock.vue'));
-Vue.component('header-menu', require('./components/HeaderMenu.vue'));
+// Vue.component('example-component', require('./components/ExampleComponent.vue'));
+// Vue.component('footer-block', require('./components/FooterBlock.vue'));
+// Vue.component('header-menu', require('./components/HeaderMenu.vue'));
 //Vue.component('header-bar', require('./components/HeaderBar.vue'));
-Vue.component('in-app-menu', require('./components/InAppMenu.vue'));
-Vue.component('home-slider', require('./components/HomeSlider.vue'));
-Vue.component('website-carbon', require('./components/WebsiteCarbon.vue'));
+// Vue.component('in-app-menu', require('./components/InAppMenu.vue'));
+// Vue.component('home-slider', require('./components/HomeSlider.vue'));
+// Vue.component('website-carbon', require('./components/WebsiteCarbon.vue'));
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -42,13 +41,17 @@ Vue.component('website-carbon', require('./components/WebsiteCarbon.vue'));
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-import HeaderMenu from './components/HeaderMenu'
-//import HeaderBar from './components/HeaderBar'
-import InAppMenu from './components/InAppMenu'
-import FooterBlock from './components/FooterBlock'
-import HomeSlider from './components/HomeSlider'
-import WebsiteCarbon from './components/WebsiteCarbon'
-import ExampleComponent from './components/ExampleComponent'
+// import HeaderMenu from './components/HeaderMenu'
+// import HeaderBar from './components/HeaderBar'
+// import InAppMenu from './components/InAppMenu'
+// import FooterBlock from './components/FooterBlock'
+// import HomeSlider from './components/HomeSlider'
+// import WebsiteCarbon from './components/WebsiteCarbon'
+// import ExampleComponent from './components/ExampleComponent'
+
+Vue.component('comment', require('./components/Comments.vue'));
+
+import comment from './components/Comments'
 
 const app = new Vue({
     el: '#app',
