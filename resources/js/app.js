@@ -9,8 +9,8 @@ import Vue from 'vue'
 import axios from 'axios'
 
 Vue.prototype.$http = axios
-
-require('./bootstrap');
+// require('./jquery');
+// require('./bootstrap');
 
 Vue.use(Vue);
 
