@@ -36,7 +36,7 @@ class LayoutController extends Controller
         $o = '';
         $o .= '<div class="col-12 row mb-4">
             <div class="col-12 pb-3">
-                <h1>Beverages</h1>
+                <!---<h1>Beverages</h1>--->
             </div>'; 
         foreach($data['entries'] as $i)
         {

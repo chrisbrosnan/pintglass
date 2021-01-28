@@ -8,7 +8,6 @@
 				<div class="card">					
 					<div class="card-body row">
 						{!! $beverageFeed !!}
-						{!! $blogFeed !!}
 					</div>
 				</div>
 			</div>

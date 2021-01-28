@@ -56,12 +56,6 @@ import comment from './components/Comments'
 const app = new Vue({
     el: '#app',
 	components: {
-    	HeaderMenu, 
-		//HeaderBar, 
-		ExampleComponent, 
-		FooterBlock, 
-		InAppMenu, 
-		HomeSlider, 
-		WebsiteCarbon
+    	comment
 	}
 });
