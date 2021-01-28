@@ -49,9 +49,8 @@ window.Vue = require('vue');
 // import WebsiteCarbon from './components/WebsiteCarbon'
 // import ExampleComponent from './components/ExampleComponent'
 
-Vue.component('comment', require('./components/Comments.vue'));
-
 import comment from './components/Comments'
+Vue.component('comment', require('./components/Comments.vue'));
 
 const app = new Vue({
     el: '#app',
