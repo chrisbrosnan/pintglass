@@ -93,7 +93,7 @@
 									<br/>
 									<h2 class="text-upper mt-2 mb-2">Comments</h2>
 									<div class="mb-4">
-										<comment></comment>
+										<example-component></example-component>
 									</div>
 									<!--<h2 class="text-upper mt-2 mb-2">Others from <em>{{ $bevData['brewery'] }}</em></h2>
 									<div class="mb-4">
