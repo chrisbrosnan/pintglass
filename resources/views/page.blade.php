@@ -17,7 +17,7 @@
 								</div>
 								<div class="col-12 col-md-8">
 									@foreach($bevData as $b)
-										@php(print_r($b))
+										@php(print_r($b))<br/><br/><br/>
 									@endforeach
 								</div>
 							</div>
