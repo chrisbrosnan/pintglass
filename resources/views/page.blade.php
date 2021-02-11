@@ -13,7 +13,7 @@
 						<div class="container">
 							<div class="row">
 									@if($pageSlug == 'beverages')
-										<div class="col-12 col-md-8">
+										<div class="col-12">
 											@php($i = 0)
 											<div class="col-12 row mb-4">
 												<div class="col-12 pb-3 text-center">
