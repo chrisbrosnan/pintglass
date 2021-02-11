@@ -16,8 +16,12 @@
 									<amp-img class="col-12" src="" width="300" height="400"></amp-img>
 								</div>
 								<div class="col-12 col-md-8">
+									@php($i = 0)
 									@foreach($bevData as $b)
-										@php(print_r($b))<br/><br/><br/>
+										@php($i++)
+										@if($i > 1)
+											@php(print_r($b))<br/><br/><br/>
+										@endif
 									@endforeach
 								</div>
 							</div>
