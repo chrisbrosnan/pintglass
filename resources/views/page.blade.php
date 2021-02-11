@@ -16,7 +16,9 @@
 									<amp-img class="col-12" src="" width="300" height="400"></amp-img>
 								</div>
 								<div class="col-12 col-md-8">
-									@php(print_r($bevData))
+									@foreach($bevData as $b)
+										@php(print_r($b))
+									@endforeach
 								</div>
 							</div>
 						</div>
