@@ -22,6 +22,7 @@
 												@foreach($bevData as $b)
 													@php($i++)
 													@if($i > 1)
+														{{ $i }}<br/>
 														@php(print_r($bevData))
 													@endif
 												@endforeach
