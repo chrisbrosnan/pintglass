@@ -16,7 +16,7 @@
 									<amp-img class="col-12" src="" width="300" height="400"></amp-img>
 								</div>
 								<div class="col-12 col-md-8">
-									@php(print_r($pageData))
+									@php(print_r($bevata))
 								</div>
 							</div>
 						</div>
