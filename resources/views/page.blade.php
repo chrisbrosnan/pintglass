@@ -36,7 +36,7 @@
 													<a class="col-12 col-md-3" href="https://pintglassldn.com/beverages/{{ $b['slug'] }}">
 														<div class="p-0" style="height: 200px; background: url('{{ $b['image']['path'] }}'); background-size: cover; background-position: center center;">
 															<p class="col-12 text-white font-weight-bold py-2 bg-dark" style="line-height: 1.3em;">{{ $b['name'] }}<br/>
-															<scan class="font-weight-normal" style="font-weight: .5em;">{{ sub_str($b['date'], 8) }}</span></p>
+															<scan class="font-weight-normal" style="font-weight: .5em;">{{ substr($b['date'], 8) }}</span></p>
 														</div>
 													</a>
 												@endforeach
