@@ -32,12 +32,11 @@
 												<div class="col-12 pb-3 text-center">
 													<h1>Blog</h1>
 												</div>
-												@php(print_r($blogData))
-												@foreach($bevData['entries'] as $b)
+												@foreach($blogData['entries'] as $b)
 													<a class="col-12 col-md-3" href="https://pintglassldn.com/beverages/{{ $b['slug'] }}">
 														<div class="p-0" style="height: 200px; background: url('{{ $b['image']['path'] }}'); background-size: cover; background-position: center center;">
-															<p class="col-12 text-white font-weight-bold py-2 bg-dark" style="line-height: 1.3em;">{{ $b['name'] }} (ABV {{ $b['abv'] }} %)<br/>
-															<scan class="font-weight-normal" style="font-weight: .5em;">{{ $b['brewery'] }} in {{ $b['town_origin'] }}, {{ $b['country_origin'] }}</span></p>
+															<p class="col-12 text-white font-weight-bold py-2 bg-dark" style="line-height: 1.3em;">{{ $b['name'] }}<br/>
+															<scan class="font-weight-normal" style="font-weight: .5em;">{{ sub_str($b['date'], 8) }}</span></p>
 														</div>
 													</a>
 												@endforeach
