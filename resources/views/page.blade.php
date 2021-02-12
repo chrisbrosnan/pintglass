@@ -6,9 +6,6 @@
 		<div class="row justify-content-center">
 			<div id="content" class="col-12 col-md-10 m-5">
 				<div class="card">
-					<div class="card-header text-center">
-						<h1></h1>
-					</div>
 					<div class="card-body">
 						<div class="container">
 							<div class="row">
@@ -35,6 +32,7 @@
 												<div class="col-12 pb-3 text-center">
 													<h1>Blog</h1>
 												</div>
+												@php(print_r($blogData))
 												@foreach($bevData['entries'] as $b)
 													<a class="col-12 col-md-3" href="https://pintglassldn.com/beverages/{{ $b['slug'] }}">
 														<div class="p-0" style="height: 200px; background: url('{{ $b['image']['path'] }}'); background-size: cover; background-position: center center;">
