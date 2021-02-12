@@ -21,7 +21,7 @@ class BlogController extends Controller
 
     function getPost($slug)
     {
-    	$blogData = $this->api->getBlogData($slug)['entries'][0];
+    	$blogData = $this->api->getBlogData($slug);
       $globalData = $this->api->getSingletonData('globals'); 
       $dataArray = array('blogData', 'globalData'); 
       return view('blog', compact($dataArray));
