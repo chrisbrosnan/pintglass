@@ -10,7 +10,9 @@
 	
     <script async src="https://cdn.ampproject.org/v0.js"></script>
 
-	  {!! $globalData['header_scripts'] !!}
+    @if(isset($globalData['header_scripts']))
+  	  {!! $globalData['header_scripts'] !!}
+    @endif
 	
     <title>{{ config('app.name', 'PintglassLDN') }}</title>
     <link rel="canonical" href="{{ URL::current() }}">
@@ -35,9 +37,11 @@
       }
     </script>
 	
-	<style amp-boilerplate>
-		{{ $globalData['header_styles'] }}
-	</style>
+  @if(isset($globalData['header_styles']))
+    <style amp-boilerplate>
+      {{ $globalData['header_styles'] }}
+    </style>
+  @endif
 
 </head>
 <body>
@@ -58,7 +62,9 @@
 		
     </div>
 
-	{!! $globalData['footer_scripts'] !!}
+  @if(isset($globalData['footer_scripts']))
+  	{!! $globalData['footer_scripts'] !!}
+  @endif
 	
 </body>
 </html>
