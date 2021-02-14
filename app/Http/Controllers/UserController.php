@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\DataController; 
 
 class UserController extends Controller
 {
@@ -21,8 +22,15 @@ class UserController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
+    public function createNewUser($data)
+    {
+        
+    }
+
     public function showUserProfile()
     {
         return view('settings-process');
     }
+
 }
