@@ -55,9 +55,6 @@ class RegisterController extends Controller
 			'lastname' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
 			'username' => ['required', 'string', 'max:255'],
-			'avatar' => ['required', 'string', 'max:255'],
-			'favbev' => ['required', 'string', 'max:255'],
-			'favbar' => ['required', 'string', 'max:255'],
 			'bio' => ['required', 'string', 'max:255'],
         ]);
     }
