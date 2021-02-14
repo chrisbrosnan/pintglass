@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\DataController; 
 
 class HomeController extends Controller
 {
@@ -23,6 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $globalData = $this->api->getSingletonData('globals'); 
+        $allBevData = $this->api->getAllBeverageData(); 
+        $allBlogData = $this->api->getAllBlogData(); 
+        $blogFeed = $this->layout->homeBlogLayout($allBlogData); 
+        $beverageFeed = $this->layout->homeBevLayout($allBevData); 
+        $dataArray = array('globalData', 'blogFeed', 'beverageFeed');
+        return view('index', compact($dataArray));
     }
 }

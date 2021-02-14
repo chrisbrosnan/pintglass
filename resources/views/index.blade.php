@@ -7,7 +7,7 @@
 			<div class="col-12 col-md-10 m-5">
 				<div class="card">					
 					<div class="card-body row">
-						{!! $beverageFeed !!}
+					
 					</div>
 				</div>
 			</div>
