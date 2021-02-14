@@ -12,9 +12,10 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(DataController $dataController)
     {
-        $this->middleware('auth');
+        $this->middleware('auth'); 
+        $this->api = $dataController; 
     }
 
     /**
