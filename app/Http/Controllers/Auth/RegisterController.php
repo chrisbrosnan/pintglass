@@ -76,7 +76,6 @@ class RegisterController extends Controller
 			'favbev' => $data['favbev'], 
 			'favbar' => $data['favbar'], 
 			'dob' => $data['dob'], 
-			'avatar' => $data['avatar'], 
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
