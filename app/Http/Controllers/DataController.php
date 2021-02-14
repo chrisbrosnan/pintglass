@@ -142,6 +142,41 @@ class DataController extends Controller
 
 	// Users
 
+	function newUser($data)
+	{
+		return Http::post($this->getCmsApiUrl() . 'collections/post/users?token=' . $this->getCmsApiToken(), {
+			"data" : {
+				"first_name" : $data['first_name'],
+				"last_name" : $data['last_name'],
+				"email" : $data['email'], 
+				"display_name" : $data['first_name'], 
+				"username" : str_replace(" ", "", $data['username']),
+				"fav_beverage" : $data['favbev'], 
+				"fav_venue" : $data['favbar'], 
+				"bio" : $data['bio'], 
+			}
+		}
+
+		); 
+		// first_name 
+
+		// last_name
+
+		// email
+
+		// display_name
+
+		// username
+
+		// fav_beverage
+
+		// fav_venue
+
+		// slug
+
+		// bio
+	}
+
 	function getAllUserData()
 	{
 		return $this->getCollectionAllData('users'); 

@@ -25,7 +25,7 @@ class UserController extends Controller
 
     public function createNewUser($data)
     {
-        
+        return DataController::newUser($data); 
     }
 
     public function showUserProfile()
