@@ -88,34 +88,6 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <label for="avatar" class="col-md-4 col-form-label text-md-right">{{ __('Profile Picture') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="avatar" type="file" class="form-control @error('avatar') is-invalid @enderror" name="avatar" value="{{ old('avatar') }}" required autocomplete="avatar" autofocus style="border: none;">
-
-                                @error('avatar')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="dob" class="col-md-4 col-form-label text-md-right">{{ __('Date of Birth') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="dob" type="date" class="form-control @error('dob') is-invalid @enderror" name="dob" value="{{ old('dob') }}" required autocomplete="dob" autofocus>
-
-                                @error('dob')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
 						
 						<div class="form-group row">
                             <label for="bio" class="col-md-4 col-form-label text-md-right">{{ __('My Bio') }}</label>
