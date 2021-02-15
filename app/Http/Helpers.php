@@ -9,7 +9,7 @@ function getPostById($id)
 	return $request; 
 }
 
-function cleanBlogDate($d)
+function cleanBlogDate($date)
 {
 	$d = substr($d, 8); 
 	$m = substr($d, 5, 6)
