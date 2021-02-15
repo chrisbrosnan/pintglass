@@ -144,7 +144,7 @@ class DataController extends Controller
 
 	function newUser($data)
 	{
-		
+
 		return Http::post($this->getCmsApiUrl() . 'collections/post/users?token=' . $this->getCmsApiToken(), {
 			"data" : {
 				"first_name" : $data['first_name'],
@@ -156,7 +156,7 @@ class DataController extends Controller
 				"fav_venue" : $data['favbar'], 
 				"bio" : $data['bio'], 
 			}
-		}
+		});
 
 		// ); 
 		// first_name 
