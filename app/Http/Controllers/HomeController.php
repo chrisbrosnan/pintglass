@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\DataController; 
 
 class HomeController extends Controller
 {
@@ -12,10 +11,9 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct(DataController $dataController)
+    public function __construct()
     {
         $this->middleware('auth'); 
-        $this->api = $dataController; 
     }
 
     /**
@@ -25,12 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $globalData = $this->api->getSingletonData('globals'); 
-        $allBevData = $this->api->getAllBeverageData(); 
-        $allBlogData = $this->api->getAllBlogData(); 
-        $blogFeed = $this->layout->homeBlogLayout($allBlogData); 
-        $beverageFeed = $this->layout->homeBevLayout($allBevData); 
-        $dataArray = array('globalData', 'blogFeed', 'beverageFeed');
-        return view('index', compact($dataArray));
+        return view('home');
     }
 }
