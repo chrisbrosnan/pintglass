@@ -157,7 +157,7 @@ class DataController extends Controller
 		// 	}
 		// }
 
-		); 
+		// ); 
 		// first_name 
 
 		// last_name
