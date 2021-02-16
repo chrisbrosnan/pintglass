@@ -149,10 +149,10 @@ class DataController extends Controller
 				'method' => 'post',
 				'header' => 'Content-Type: application/json',
 				'data' => array(
-					'first_name' => $data['first_name'],
-					'last_name' => $data['last_name'],
+					'first_name' => $data['firstname'],
+					'last_name' => $data['lastname'],
 					'email' => $data['email'], 
-					'display_name' => $data['first_name'], 
+					'display_name' => $data['firstname'], 
 					'username' => str_replace(" ", "", $data['username']),
 					'fav_beverage' => $data['favbev'], 
 					'fav_venue' => $data['favbar'], 
