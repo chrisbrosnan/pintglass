@@ -142,7 +142,7 @@ class DataController extends Controller
 
 	// Users
 
-	function newUser($data)
+	public static function newUser($data)
 	{
 
 		return Http::post($this->getCmsApiUrl() . 'collections/save/users?token=' . $this->getCmsApiToken(), [
