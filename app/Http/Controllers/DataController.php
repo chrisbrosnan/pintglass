@@ -145,7 +145,7 @@ class DataController extends Controller
 	function newUser($data)
 	{
 
-		return Http::post($this->getCmsApiUrl() . 'collections/post/users?token=' . $this->getCmsApiToken(), [
+		return Http::put($this->getCmsApiUrl() . 'collections/post/users?token=' . $this->getCmsApiToken(), [
 			"first_name" => $data['first_name'],
 			"last_name" => $data['last_name'],
 			"email" => $data['email'], 
