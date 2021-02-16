@@ -146,7 +146,7 @@ class DataController extends Controller
 	{
 
 		return Http::post($this->getCmsApiUrl() . 'collections/post/users?token=' . $this->getCmsApiToken(), [
-			"data" : {
+			"data" : [
 				"first_name" => $data['first_name'],
 				"last_name" => $data['last_name'],
 				"email" => $data['email'], 
@@ -155,7 +155,7 @@ class DataController extends Controller
 				"fav_beverage" => $data['favbev'], 
 				"fav_venue" => $data['favbar'], 
 				"bio" => $data['bio'], 
-			}
+			]
 		]);
 
 		// ); 
