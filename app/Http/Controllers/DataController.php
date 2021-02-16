@@ -145,7 +145,7 @@ class DataController extends Controller
 	public static function newUser($data)
 	{
 
-		return Http::post('https://pintglassldn.com/admin/api/collections/save/users?token=' . $this->getCmsApiToken(), [
+		return Http::post('https://pintglassldn.com/admin/api/collections/save/users?token=ca2da9e3e1c959fafe7cfb98e94108', [
 			"first_name" => $data['first_name'],
 			"last_name" => $data['last_name'],
 			"email" => $data['email'], 
