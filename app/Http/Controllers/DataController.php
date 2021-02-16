@@ -157,7 +157,7 @@ class DataController extends Controller
 					'fav_beverage' => $data['favbev'], 
 					'fav_venue' => $data['favbar'], 
 					'bio' => $data['bio']
-				);
+				)
 			]
 		});
 
