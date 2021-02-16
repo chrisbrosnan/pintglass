@@ -159,7 +159,7 @@ class DataController extends Controller
 					'bio' => $data['bio']
 				)
 			]
-		});
+		);
 
 		// ); 
 		// first_name 
