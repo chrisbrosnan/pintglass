@@ -146,18 +146,19 @@ class DataController extends Controller
 	{
 
 		return Http::post('https://pintglassldn.com/admin/api/collections/save/users?token=ca2da9e3e1c959fafe7cfb98e94108', [
-			'method' => 'post',
-			'header' => 'Content-Type: application/json',
-			'data' => array(
-				'first_name' => $data['first_name'],
-				'last_name' => $data['last_name'],
-				'email' => $data['email'], 
-				'display_name' => $data['first_name'], 
-				'username' => str_replace(" ", "", $data['username']),
-				'fav_beverage' => $data['favbev'], 
-				'fav_venue' => $data['favbar'], 
-				'bio' => $data['bio']
-			);
+				'method' => 'post',
+				'header' => 'Content-Type: application/json',
+				'data' => array(
+					'first_name' => $data['first_name'],
+					'last_name' => $data['last_name'],
+					'email' => $data['email'], 
+					'display_name' => $data['first_name'], 
+					'username' => str_replace(" ", "", $data['username']),
+					'fav_beverage' => $data['favbev'], 
+					'fav_venue' => $data['favbar'], 
+					'bio' => $data['bio']
+				);
+			]
 		});
 
 		// ); 
