@@ -23,11 +23,6 @@ class UserController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-    public function createNewUser($data)
-    {
-        return DataController::newUser($data); 
-    }
-
     public function showUserProfile()
     {
         return view('settings-process');
