@@ -20,6 +20,8 @@ Route::get('/', 'PageController@getHomepage');
 
 Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');
+
 // Top level pages
 
 Route::group(['prefix' => ''], function () {
@@ -108,6 +110,3 @@ Route::group(['prefix' => 'beverages'], function () {
 
 // ------------------------------ //
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
