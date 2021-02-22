@@ -58,53 +58,53 @@ Route::group(['prefix' => 'beverages'], function () {
 
 // Other pages
 
-Route::get('/myaccount', function () {
-    return view('home');
-});
+// Route::get('/myaccount', function () {
+//     return view('home');
+// });
 
-// User pages
+// // User pages
 
-Route::get('/settings', function () {
-    return view('users.page-settings');
-});
+// Route::get('/settings', function () {
+//     return view('users.page-settings');
+// });
 
-Route::get('/groups', function () {
-    return view('users.page-groups');
-});
+// Route::get('/groups', function () {
+//     return view('users.page-groups');
+// });
 
-Route::get('/groups/add-new', function () {
-    return view('users.page-groups-add');
-});
+// Route::get('/groups/add-new', function () {
+//     return view('users.page-groups-add');
+// });
 
-Route::get('/friends', function () {
-    return view('users.page-user-lists');
-});
+// Route::get('/friends', function () {
+//     return view('users.page-user-lists');
+// });
 
-Route::get('/lists', function () {
-    return view('users.page-lists');
-});
+// Route::get('/lists', function () {
+//     return view('users.page-lists');
+// });
 
-Route::get('users/{id}', function ($id) {
-    return view('users.page-user-profile');
-});
+// Route::get('users/{id}', function ($id) {
+//     return view('users.page-user-profile');
+// });
 
-Route::get('/edit-profile', function () {
-    return view('users.page-edit-profile');
-});
+// Route::get('/edit-profile', function () {
+//     return view('users.page-edit-profile');
+// });
 
-Route::get('/settings-process', function () {
-	return view('users.process-settings');
-});
+// Route::get('/settings-process', function () {
+// 	return view('users.process-settings');
+// });
 
-Route::get('/process-profile-edit', function () {
-	return view('users.process-profile-edit');
-});
+// Route::get('/process-profile-edit', function () {
+// 	return view('users.process-profile-edit');
+// });
 
-Route::get('/add-group-process', function() {
-	return view('users.process-add-group');
-});
+// Route::get('/add-group-process', function() {
+// 	return view('users.process-add-group');
+// });
 
-Route::get('/dashboard', 'HomeController@index')->name('home');
+// Route::get('/dashboard', 'HomeController@index')->name('home');
 
 // ------------------------------ //
 
