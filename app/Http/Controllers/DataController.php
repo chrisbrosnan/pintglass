@@ -13,8 +13,8 @@ use Config;
 class DataController extends Controller
 {
 
-	const CMS_API_URL = 'https://pintglassldn.com/admin/api/';
-	const CMS_API_TOKEN = 'ca2da9e3e1c959fafe7cfb98e94108';
+	const CMS_API_URL = 'http://18.133.222.162/admin/api/';
+	const CMS_API_TOKEN = '9105be4359704b6eb67d8762a92b68';
 	
 	function getCmsApiUrl()
 	{
